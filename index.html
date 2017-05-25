@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<!--[if IE 8 ]><html class="no-js oldie ie8" lang="en"> <![endif]-->
+<!--[if IE 9 ]><html class="no-js oldie ie9" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html class="no-js" lang="en"> <!--<![endif]-->
+
+<!-- === Copyright Swamphacks 2017 === -->
+
+<head>
+  <!--- Basic page needs
+   ================================================== -->
+   <meta charset="utf-8">
+	 <title>Swamphacks 2018</title>
+	 <meta name="description" content="Florida's Premiere Hackathon">
+	 <meta name="author" content="Swamphacks Team">
+
+  <!-- Mobile specific metas
+   ================================================== -->
+	 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+ 	<!-- CSS
+   ================================================== -->
+   <link rel="stylesheet" href="css/style.css">
+   <link rel="stylesheet" href="css/component.css">
+   <link rel="stylesheet" href="css/content.css">
+   <link rel="stylesheet" href="css/bootstrap.min.css">
+
+   <script src="js/modernizr.custom.js"></script>
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+  <!-- Fonts
+   ================================================== -->
+   <link href="https://fonts.googleapis.com/css?family=Montserrat|Roboto|Khula:600|Open+Sans|Lato:700" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css?family=Cabin|Hind" rel="stylesheet">
+  <!-- Icons
+   ================================================== -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<body>
+
+<div id="home">
+
+  <section id="mainWindow">
+    <div id="slideshow">
+     <div>
+       <img class="cover" src="img/swimg1.png">
+     </div>
+     <div>
+       <img class="cover" src="img/swimg2.png">
+     </div>
+     <div>
+       <img class="cover" src="img/swimg3.png">
+     </div>
+     <div>
+       <img class="cover" src="img/swimg4.png">
+     </div>
+     <div>
+       <img class="cover" src="img/swimg5.png">
+     </div>
+     <div>
+       <img class="cover" src="img/swimg6.png">
+     </div>
+     <div>
+       <img class="cover" src="img/swimg7.png">
+     </div>
+     <div>
+       <img class="cover" src="img/swimg8.png">
+     </div>
+     <div>
+       <img class="cover" src="img/swimg9.png">
+     </div>
+     <div>
+       <img class="cover" src="img/swimg10.png">
+     </div>
+     <div>
+       <img class="cover" src="img/swimg11.png">
+     </div>
+    </div>
+
+    <div id="overlay"></div>
+
+    <div class="container right">
+        <div class="row">
+            <div class="col-lg-12">
+              <img id="logo" src="img/logo.png"></img>
+                <h1 id="mainheader">swamphacks</h1>
+                <p id="headercaption">University of Florida | January 20-22, 2018</p>
+            </div>
+
+            <!-- morph-button-->
+            <div class="morph-button morph-button-modal morph-button-modal-3 morph-button-fixed">
+  						<button type="button" id="regbtn">Pre-Register</button>
+  						<div class="morph-content">
+  							<div>
+  								<div class="content-style-form content-style-form-2">
+  									<span onclick="closeClicked()" class="icon icon-close fa fa-times fa-4x">Close the dialog</span>
+  									<h2>Pre-Register</h2>
+                    <p id="textstatus" class="result"></p>
+  									<form>
+  										<p><label>School Email</label><input type="text" id="myEmail" /></p>
+  										<p><label>First Name</label><input type="text" id="firstname" /></p>
+  										<p><label>Last Name</label><input type="text" id="lastname" /></p>
+  										<p><button id="emailbtn" class="validate" onclick="saveData()">GO!</button></p>
+  									</form>
+  								</div>
+  							</div>
+  						</div>
+  					</div><!-- morph-button -->
+
+            <!-- morph-button-->
+            <!-- <div class="mentor morph-button morph-button-modal morph-button-modal-3 morph-button-fixed">
+  						<button type="button">Be a Mentor</button>
+  						<div class="morph-content">
+  							<div>
+  								<div class="content-style-form content-style-form-2">
+  									<span class="icon icon-close fa fa-times fa-4x">Close the dialog</span>
+  									<h2>Be a Mentor</h2>
+  									<form>
+  										<p><label>Email</label><input type="text" /></p>
+  										<p><label>First Name</label><input type="text" /></p>
+  										<p><label>Last Name</label><input type="text" /></p>
+                      <p><label>LinkedIn</label><input type="text" /></p>
+  										<p><button>GO!</button></p>
+  									</form>
+  								</div>
+  							</div>
+  						</div>
+  					</div>-->
+
+            <!-- morph-button-->
+            <div class="sponsor morph-button morph-button-modal morph-button-modal-3 morph-button-fixed">
+  						<button type="button">Sponsor Us</button>
+  						<div class="morph-content">
+  							<div>
+  								<div class="content-style-form content-style-form-2">
+  									<span onclick="closeClicked()" class="icon icon-close fa fa-times fa-4x">Close the dialog</span>
+  									<h2>Sponsor Us</h2>
+                    <p id="textstatus" class="result"></p>
+  									<form>
+  										<p><label>Email</label><input type="text" id="myEmail" /></p>
+  										<p><label>First Name</label><input type="text" /></p>
+  										<p><label>Last Name</label><input type="text" /></p>
+                      <p><label>Company</label><input type="text" /></p>
+  										<p><button id="emailbtn" class="validate" onclick="saveData()">Get Prospectus</button></p>
+  									</form>
+  								</div>
+  							</div>
+  						</div>
+  					</div><!-- morph-button -->
+
+
+        </div>
+      </div>
+  </section>
+
+  <section id="credit">
+
+    <div class="creditblock">
+      <p class="cretxt">made with a  <i class="fa fa-desktop fa-lg" aria-hidden="true"></i>  by the swamphacks team</p>
+    </div>
+
+  </section>
+
+  <section id="boxes">
+    <div class="morelessinfo"></div>
+        <div class="row">
+
+          <!-- <div class="col-md-4 blockouter">
+            <div class="blockinner b1">
+              <h1 class="boxheader redtxt">Get Updates</h1>
+              <p class="boxdescription">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
+              <div class="simplebtn simplebtnred redtxt"><a href="#">Pre-Register ➞</a></div>
+            </div>
+          </div> -->
+
+
+          <div class="col-lg-6 col-md-6 col-sm-6 blockouter top">
+            <div class="blockinner b3">
+              <h1 class="boxheader greentxt">Sponsor Us</h1>
+              <p class="boxdescription">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
+              <!--<div class="boxbtn bluebtn">Click Me</div>-->
+              <div class="simplebtn simplebtngreen greentxt"><a href="#">Sponsorship Prospectus ➞</a></div>
+            </div>
+          </div>
+
+
+
+
+          <div class="col-lg-6 col-md-6 col-sm-6 blockouter bottom">
+            <div class="blockinner b2" data-role"main">
+              <h1 class="boxheader bluetxt">Be a Mentor</h1>
+              <p class="boxdescription">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
+              <!--<div class="boxbtn greenbtn">Click Me</div>-->
+              <div class="simplebtn simplebtnblue bluetxt overlay-open"><a href="#slice">More Info ➞</a></div>
+            </div>
+          </div>
+        </div>
+
+  </section>
+
+</div>
+
+  <div class="panel" id="slice">
+      <div class="panel-content">
+          <span class="closementor overlay-close"><a href="#home"><i class="fa fa-times" aria-hidden="true"></i></a></span>
+          <h1 class="yugetxt">Be a Mentor</h1>
+
+          <p>Gumbo beet greens corn soko endive gumbo gourd. Parsley shallot courgette tatsoi pea sprouts fava bean collard greens dandelion okra wakame tomato. Dandelion cucumber earthnut pea peanut soko zucchini.</p>
+          <p>Turnip greens yarrow ricebean rutabaga endive cauliflower sea lettuce kohlrabi amaranth water spinach avocado daikon napa cabbage asparagus winter purslane kale. Celery potato scallion desert raisin horseradish spinach carrot soko. Lotus root water spinach fennel kombu maize bamboo shoot green bean swiss chard seakale pumpkin onion chickpea gram corn pea. Brussels sprout coriander water chestnut gourd swiss chard wakame kohlrabi beetroot carrot watercress. Corn amaranth salsify bunya nuts nori azuki bean chickweed potato bell pepper artichoke.</p>
+
+          <div class="mentor-style-form">
+            <p id="textstatustor" class="resultmentor"></p>
+            <form>
+              <p><label>Email</label><input type="text" id="mentorEmail" /></p>
+              <p><label>First Name</label><input type="text" id="fnametor"/></p>
+              <p><label>Last Name</label><input type="text" id="lnametor"/></p>
+              <p><label>LinkedIn</label><input type="text" id="mentorlinkedin"/></p>
+              <p><button id="mentorbtn" class="validate" onclick="saveDataMentor()">Apply</button></p>
+            </form>
+          </div>
+
+      </div>
+  </div>
+
+
+</body>
+
+  <!-- <script src="https://www.gstatic.com/firebasejs/4.0.0/firebase.js"></script>
+  <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyDz1rvxuYDgsqMrGMdZ4iBIOqUBGETAo04",
+      authDomain: "swamphacks-confirmed-attendees.firebaseapp.com",
+      databaseURL: "https://swamphacks-confirmed-attendees.firebaseio.com",
+      projectId: "swamphacks-confirmed-attendees",
+      storageBucket: "swamphacks-confirmed-attendees.appspot.com",
+      messagingSenderId: "1008919618491"
+    };
+    firebase.initializeApp(config);
+  </script> -->
+
+
+  <!-- jQuery -->
+  <script src="js/jquery.js"></script>
+
+  <!-- Bootstrap Core JavaScript -->
+  <script src="js/bootstrap.min.js"></script>
+
+  <script src="js/gradientanimated.js"></script>
+  <script src="js/classie.js"></script>
+  <script src="js/uiMorphingButton_fixed.js"></script>
+
+  <!-- Firebase -->
+  <script src="https://www.gstatic.com/firebasejs/3.7.6/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/3.7.6/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/3.7.6/firebase-database.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/3.7.6/firebase.js"></script>
+  <script src="https://cdn.firebase.com/js/client/2.3.1/firebase.js"></script>
+
+  <script>
+    $("#slideshow > div:gt(0)").hide();
+
+    setInterval(function() {
+      $('#slideshow > div:first')
+        .fadeOut(1000)
+        .next()
+        .fadeIn(1000)
+        .end()
+        .appendTo('#slideshow');
+    }, 3000);
+
+  </script>
+
+  <script>
+    (function() {
+      var docElem = window.document.documentElement, didScroll, scrollPosition;
+
+      // trick to prevent scrolling when opening/closing button
+      function noScrollFn() {
+        window.scrollTo( scrollPosition ? scrollPosition.x : 0, scrollPosition ? scrollPosition.y : 0 );
+      }
+
+      function noScroll() {
+        window.removeEventListener( 'scroll', scrollHandler );
+        window.addEventListener( 'scroll', noScrollFn );
+      }
+
+      function scrollFn() {
+        window.addEventListener( 'scroll', scrollHandler );
+      }
+
+      function canScroll() {
+        window.removeEventListener( 'scroll', noScrollFn );
+        scrollFn();
+      }
+
+      function scrollHandler() {
+        if( !didScroll ) {
+          didScroll = true;
+          setTimeout( function() { scrollPage(); }, 60 );
+        }
+      };
+
+      function scrollPage() {
+        scrollPosition = { x : window.pageXOffset || docElem.scrollLeft, y : window.pageYOffset || docElem.scrollTop };
+        didScroll = false;
+      };
+
+      scrollFn();
+
+      [].slice.call( document.querySelectorAll( '.morph-button' ) ).forEach( function( bttn ) {
+        new UIMorphingButton( bttn, {
+          closeEl : '.icon-close',
+          onBeforeOpen : function() {
+            // don't allow to scroll
+            noScroll();
+          },
+          onAfterOpen : function() {
+            // can scroll again
+            canScroll();
+          },
+          onBeforeClose : function() {
+            // don't allow to scroll
+            noScroll();
+          },
+          onAfterClose : function() {
+            // can scroll again
+            canScroll();
+          }
+        } );
+      } );
+
+      // for demo purposes only
+      [].slice.call( document.querySelectorAll( 'form button' ) ).forEach( function( bttn ) {
+        bttn.addEventListener( 'click', function( ev ) { ev.preventDefault(); } );
+      } );
+    })();
+  </script>
+
+  <!-- Email JavaScript Func -->
+  <script>
+
+  function validateEmail(emailVal) {
+    var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(emailVal);
+  }
+
+  function checkEdu(emailVal) {
+    return (emailVal.substr(-4) == '.edu');
+  }
+
+  function closeClicked() {
+    $(".result").text("");
+  }
+
+  function saveData() {
+
+    var ref = new Firebase("https://swamphacks-pre-registration.firebaseio.com");
+    var emailVal = $("#myEmail").val();
+    var fname = $("#firstname").val();
+    var lname = $("#lastname").val();
+    var usersRef = ref.child("preregusers");
+
+    if (validateEmail(emailVal) && checkEdu(emailVal)) {
+      usersRef.push({
+        email: emailVal,
+        first_name: fname,
+        last_name: lname
+      });
+
+      $(".result").text("Thanks for signing up!");
+      $(".result").css("color", "#80C995");
+      $("#regbtn").text("SENT!");
+      $("#regbtn").css("color", "#80C995");
+      $("#regbtn").css("cursor", "not-allowed");
+      $("#regbtn").addClass('no-hover');
+      document.getElementById("regbtn").disabled = true;
+
+      // $(".content-style-form #myEmail").css("border-color", "#68bd45");
+      console.log('Success! Email Added.');
+
+    } else {
+
+      $(".result").text("Please enter a valid school email.");
+      $(".result").css("color", "#aa5861");
+      // $(".content-style-form #myEmail").css("border-color", "#aa5861");
+      console.log('Put a valid email.');
+      document.getElementById("myEmail").value = "";
+
+    }
+
+  }
+
+  function saveDataMentor() {
+
+    var ref = new Firebase("https://swamphacks-pre-registration.firebaseio.com");
+    var emailValTor = $("#mentorEmail").val();
+    var fname = $("#fnametor").val();
+    var lname = $("#lnametor").val();
+    var linked = $("#mentorlinkedin").val();
+    var usersRef = ref.child("mentorapps");
+
+    if (validateEmail(emailValTor)) {
+      usersRef.push({
+        email: emailValTor,
+        first_name: fname,
+        last_name: lname,
+        linked_in: linked
+      });
+
+      $(".resultmentor").text("Thanks for signing up!");
+      $(".resultmentor").css("color", "#80C995");
+
+      // $(".content-style-form #myEmail").css("border-color", "#68bd45");
+      console.log('Success! Email Added.');
+
+    } else {
+
+      $(".resultmentor").text("Please enter a valid email.");
+      $(".resultmentor").css("color", "#aa5861");
+      // $(".content-style-form #myEmail").css("border-color", "#aa5861");
+      console.log('Put a valid email.');
+      document.getElementById("mentorEmail").value = "";
+
+    }
+
+  }
+
+  </script>
+
+</html>
