@@ -224,10 +224,10 @@ html {
 .simplebtn {
   background-color: transparent;
   font-family: 'Montserrat', serif;
-  font-size: 16px;
+  font-size: 14px;
   display: inline-block;
   margin-left: 20px;
-  margin-top: 40px;
+  margin-top: 10px;
 }
 
 .simplebtn > a {
@@ -451,6 +451,28 @@ html {
           transform: translate3d(0, 0, 0);
 }
 
+.panel#slicevol {
+  background-color: #F04C5A;
+  -webkit-transition: all 800ms cubic-bezier(0.19, 1, 0.56, 1);
+  transition: all 800ms cubic-bezier(0.19, 1, 0.56, 1);
+  -webkit-transform: translate3d(-100%, 0, 0);
+          transform: translate3d(-100%, 0, 0);
+          width: 100%;
+          height: 100%;
+          border-radius: 0;
+          margin: 0;
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          left: 0;
+          right: 0;
+
+}
+.panel#slicevol:target {
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+}
+
 /* Sample Particle background */
 /* •••••••••••••••••••••••••••••••• */
 #particles {
@@ -459,6 +481,17 @@ html {
 
 .yugetxt {
   color: #1f6c95;
+  font-size: 40px;
+  text-align: left;
+  font-family: 'Montserrat', sans-serif;
+  margin-left: -140px;
+  margin-top: -40px;
+  margin-bottom: 20px;
+  margin-right: -140px;
+}
+
+.yugetxtred {
+  color: #A4232F;
   font-size: 40px;
   text-align: left;
   font-family: 'Montserrat', sans-serif;
@@ -480,11 +513,38 @@ html {
   text-rendering: optimizeLegibility;
 }
 
+.panel-content p .red {
+  font-size: 18px;
+  font-family: 'Open Sans', sans-serif;
+  line-height: 26px;
+  color: #F37472;
+  text-align: left;
+  margin-left: -130px;
+  margin-right: -120px;
+  font-weight: lighter;
+  text-rendering: optimizeLegibility;
+}
+
 .mentor-style-form .resultmentor {
   text-align: center;
   font-family: 'Montserrat', sans-serif;
   font-size: 14px;
   margin: 0 auto;
+}
+
+.mentor-style-form-red .resultvol {
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  margin: 0 auto;
+}
+
+#slicevol .panel-content span i {
+  color: #a4232f;
+}
+
+#slice .panel-content span i {
+  color: #1f6c95;
 }
 
 .closementor {
@@ -498,8 +558,11 @@ html {
 
 @media screen and (min-width: 1000px) {
   #boxes .row {
-    margin-left: 10%;
-    margin-right: 10%;
+
+  }
+  .simplebtn {
+    font-size: 16px;
+    margin-top: 40px;
   }
 }
 
@@ -509,11 +572,15 @@ html {
 
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 780px) {
   #mainheader {
     font-size: 45px;
     font-family: 'Montserrat', serif;
     color: white;
+  }
+  .simplebtn {
+    font-size: 16px;
+    margin-top: 40px;
   }
 
   #boxes {
@@ -535,10 +602,22 @@ html {
 
   }
 
+  .mentor-style-form-red form {
+    margin-left: -10px;
+
+
+  }
+
   .mentor-style-form button {
   }
 
   .yugetxt {
+    margin-left: -160px;
+    margin-top: -40px;
+    margin-right: -160px;
+  }
+
+  .yugetxtred {
     margin-left: -160px;
     margin-top: -40px;
     margin-right: -160px;
@@ -550,6 +629,12 @@ html {
   }
 
   #slice {
+
+    height: 100vh;
+    overflow-y: scroll;
+  }
+
+  #slicevol {
 
     height: 100vh;
     overflow-y: scroll;
@@ -606,6 +691,10 @@ html {
     box-shadow: 0 0 26px 0 rgba(128,201,149,0.5);
   }
 
+  .b1 {
+    box-shadow: 0 0 26px 0 rgba(249,182,174,0.5);
+  }
+
 }
 
 @media screen and (max-width: 780px) {
@@ -640,7 +729,27 @@ html {
 
 }
 
+.mentor-style-form-red {
+	position: relative;
+	text-align: left;
+  margin-left: -130px;
+  margin-right: -120px;
+  margin-bottom: 40px;
+  margin-top: 20px;
+
+}
+
 .mentor-style-form h2 {
+	margin-top: 10px;
+	padding: 0.4em 0 0.3em;
+	text-align: center;
+	font-weight: 300;
+	font-size: 3.0em;
+	font-family: 'Montserrat', serif;
+	color: #80C995;
+}
+
+.mentor-style-form-red h2 {
 	margin-top: 10px;
 	padding: 0.4em 0 0.3em;
 	text-align: center;
@@ -656,7 +765,18 @@ html {
 
 }
 
+.mentor-style-form-red form {
+
+  width: 100%;
+
+}
+
 .mentor-style-form form p {
+	margin: 0 0 5px 0;
+	font-size: 0.7em;
+}
+
+.mentor-style-form-red form p {
 	margin: 0 0 5px 0;
 	font-size: 0.7em;
 }
@@ -665,6 +785,16 @@ html {
 	display: block;
 	padding: 10px 0 0;
 	color: #1f6c95;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	font-weight: bold;
+  font-size: 10px;
+}
+
+.mentor-style-form-red label {
+	display: block;
+	padding: 10px 0 0;
+	color: #a4232f;
 	text-transform: uppercase;
 	letter-spacing: 1px;
 	font-weight: bold;
@@ -682,19 +812,63 @@ html {
 	font-size: 2.2em;
 }
 
+.mentor-style-form-red input[type="text"],
+.mentor-style-form-red input[type="password"] {
+	padding: 10px;
+	width: 100%;
+	border: 2px solid #f6948e;
+	background: transparent;
+	color: #f6948e;
+	font-weight: 300;
+	font-size: 2.2em;
+}
+
+#slicevol .panel-content .closered {
+  background: #a4232f;
+  color: #a4232f;
+}
+
 .mentor-style-form input[type="text"]:focus,
 .mentor-style-form input[type="password"]:focus {
 	border-color: #1f6c95;
 	color: #1f6c95;
 }
 
+.mentor-style-form-red input[type="text"]:focus,
+.mentor-style-form-red input[type="password"]:focus {
+	border-color: #a4232f;
+	color: #a4232f;
+}
+
 .mentor-style-form input:focus {
+	outline: 0;
+}
+
+.mentor-style-form-red input:focus {
 	outline: 0;
 }
 
 .mentor-style-form button {
   color: white;
   background: #71b8e6;
+  font-size: 18px;
+  font-family: 'Montserrat', serif;
+  transition: 0.2s;
+  height: 80px;
+  border-radius: 6px;
+  line-height: 0;
+  border-width: 0;
+  border-style: none;
+  margin-top: 20px;
+  width: 250px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.mentor-style-form-red button {
+  color: white;
+  background: #f37472;
   font-size: 18px;
   font-family: 'Montserrat', serif;
   transition: 0.2s;
@@ -717,6 +891,19 @@ html {
   border-style: solid;
   background: #71b8e6;
   color: #1f6c95;
+/*
+  border-bottom-width: 6px;
+  border-bottom-color: rgba(72, 171, 224, 1);
+  border-bottom-style: solid;*/
+}
+
+.mentor-style-form-red button:hover,
+.mentor-style-form-red button:focus {
+  border-width: 5px;
+  border-color: #a4232f;
+  border-style: solid;
+  background: #f37472;
+  color: #a4232f;
 /*
   border-bottom-width: 6px;
   border-bottom-color: rgba(72, 171, 224, 1);

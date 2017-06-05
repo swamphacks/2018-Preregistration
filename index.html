@@ -175,24 +175,30 @@
           </div> -->
 
 
-          <div class="col-lg-6 col-md-6 col-sm-6 blockouter top">
+          <div class="col-lg-4 col-md-4 col-sm-4 blockouter top">
             <div class="blockinner b3">
               <h1 class="boxheader greentxt">Sponsor Us</h1>
               <p class="boxdescription">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
               <!--<div class="boxbtn bluebtn">Click Me</div>-->
-              <div class="simplebtn simplebtngreen greentxt"><a href="#">Sponsorship Prospectus ➞</a></div>
+              <div class="simplebtn simplebtngreen greentxt"><a href="mailto:sponsorship@swamphacks.com">Contact Us ➞</a></div>
             </div>
           </div>
 
-
-
-
-          <div class="col-lg-6 col-md-6 col-sm-6 blockouter bottom">
+          <div class="col-lg-4 col-md-4 col-sm-4 blockouter bottom">
             <div class="blockinner b2" data-role"main">
               <h1 class="boxheader bluetxt">Be a Mentor</h1>
               <p class="boxdescription">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
               <!--<div class="boxbtn greenbtn">Click Me</div>-->
               <div class="simplebtn simplebtnblue bluetxt overlay-open"><a href="#slice">More Info ➞</a></div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-4 col-sm-4 blockouter bottom">
+            <div class="blockinner b1" data-role"main">
+              <h1 class="boxheader redtxt">Volunteer</h1>
+              <p class="boxdescription">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
+              <!--<div class="boxbtn greenbtn">Click Me</div>-->
+              <div class="simplebtn simplebtnred redtxt overlay-open"><a href="#slicevol">More Info ➞</a></div>
             </div>
           </div>
         </div>
@@ -217,6 +223,27 @@
               <p><label>Last Name</label><input type="text" id="lnametor"/></p>
               <p><label>LinkedIn</label><input type="text" id="mentorlinkedin"/></p>
               <p><button id="mentorbtn" class="validate" onclick="saveDataMentor()">Apply</button></p>
+            </form>
+          </div>
+
+      </div>
+  </div>
+
+  <div class="panel" id="slicevol">
+      <div class="panel-content">
+          <span class="closementor overlay-close"><a href="#home"><i class="fa fa-times redclose" aria-hidden="true"></i></a></span>
+          <h1 class="yugetxtred">Be a Volunteer</h1>
+
+          <p class="red">Gumbo beet greens corn soko endive gumbo gourd. Parsley shallot courgette tatsoi pea sprouts fava bean collard greens dandelion okra wakame tomato. Dandelion cucumber earthnut pea peanut soko zucchini.</p>
+          <p class="red">Turnip greens yarrow ricebean rutabaga endive cauliflower sea lettuce kohlrabi amaranth water spinach avocado daikon napa cabbage asparagus winter purslane kale. Celery potato scallion desert raisin horseradish spinach carrot soko. Lotus root water spinach fennel kombu maize bamboo shoot green bean swiss chard seakale pumpkin onion chickpea gram corn pea. Brussels sprout coriander water chestnut gourd swiss chard wakame kohlrabi beetroot carrot watercress. Corn amaranth salsify bunya nuts nori azuki bean chickweed potato bell pepper artichoke.</p>
+
+          <div class="mentor-style-form-red">
+            <p id="textstatustor" class="resultvol"></p>
+            <form>
+              <p><label>Email</label><input type="text" id="volunteerEmail" /></p>
+              <p><label>First Name</label><input type="text" id="fnamevol"/></p>
+              <p><label>Last Name</label><input type="text" id="lnamevol"/></p>
+              <p><button id="volunteerbtn" class="validate" onclick="saveDataVolunteer()">Apply</button></p>
             </form>
           </div>
 
@@ -362,7 +389,7 @@
     var lname = $("#lastname").val();
     var usersRef = ref.child("preregusers");
 
-    if (validateEmail(emailVal) && checkEdu(emailVal)) {
+    if (validateEmail(emailVal)) {
       usersRef.push({
         email: emailVal,
         first_name: fname,
@@ -371,18 +398,13 @@
 
       $(".result").text("Thanks for signing up!");
       $(".result").css("color", "#80C995");
-      $("#regbtn").text("SENT!");
-      $("#regbtn").css("color", "#80C995");
-      $("#regbtn").css("cursor", "not-allowed");
-      $("#regbtn").addClass('no-hover');
-      document.getElementById("regbtn").disabled = true;
 
       // $(".content-style-form #myEmail").css("border-color", "#68bd45");
       console.log('Success! Email Added.');
 
     } else {
 
-      $(".result").text("Please enter a valid school email.");
+      $(".result").text("Please enter a valid email.");
       $(".result").css("color", "#aa5861");
       // $(".content-style-form #myEmail").css("border-color", "#aa5861");
       console.log('Put a valid email.');
@@ -410,7 +432,7 @@
       });
 
       $(".resultmentor").text("Thanks for signing up!");
-      $(".resultmentor").css("color", "#80C995");
+      $(".resultmentor").css("color", "#cbe7d0");
 
       // $(".content-style-form #myEmail").css("border-color", "#68bd45");
       console.log('Success! Email Added.');
@@ -418,10 +440,43 @@
     } else {
 
       $(".resultmentor").text("Please enter a valid email.");
-      $(".resultmentor").css("color", "#aa5861");
+      $(".resultmentor").css("color", "#f9b6ae");
       // $(".content-style-form #myEmail").css("border-color", "#aa5861");
       console.log('Put a valid email.');
       document.getElementById("mentorEmail").value = "";
+
+    }
+
+  }
+
+  function saveDataVolunteer() {
+
+    var ref = new Firebase("https://swamphacks-pre-registration.firebaseio.com");
+    var emailValVol = $("#volunteerEmail").val();
+    var fname = $("#fnamevol").val();
+    var lname = $("#lnamevol").val();
+    var usersRef = ref.child("volunteerapps");
+
+    if (validateEmail(emailValVol)) {
+      usersRef.push({
+        email: emailValVol,
+        first_name: fname,
+        last_name: lname
+      });
+
+      $(".resultvol").text("Thanks for signing up!");
+      $(".resultvol").css("color", "#cbe7d0");
+
+      // $(".content-style-form #myEmail").css("border-color", "#68bd45");
+      console.log('Success! Email Added.');
+
+    } else {
+
+      $(".resultvol").text("Please enter a valid email.");
+      $(".resultvol").css("color", "#f9b6ae");
+      // $(".content-style-form #myEmail").css("border-color", "#aa5861");
+      console.log('Put a valid email.');
+      document.getElementById("volunteerEmail").value = "";
 
     }
 
