@@ -124,27 +124,38 @@ a .circlebtn {
 }
 
 .foot {
-  height: 180px;
+  height: 80px;
 }
 
 .linkout {
   display: inline-block;
   text-align: center;
-  width: 100%;
+  padding-left: 25px;
+  padding-right: 25px;
 
+}
+
+.orsec {
+  font-family: 'Open Sans', sans-serif;
+  font-style: italic;
+  font-size: 18px;
+  color: white;
+  text-align: center;
+  margin-top: 40px;
 }
 
 .linkout a {
   font-family: 'Montserrat', serif;
-  color: white;
+  color: #48ABE0;
   font-size: 18px;
   font-weight: lighter;
   line-height: 28px;
+  transition: 0.3s;
 }
 
 .linkout a:hover,
 .linkout a:focus {
-  color: #48ABE0;
+  color: #94C6EB;
   text-decoration: none;
 
 }
@@ -177,10 +188,8 @@ a .circlebtn {
 }
 
 .linkfoot {
-  height: 180px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  height: 80px;
+
 
 }
 
@@ -743,6 +752,16 @@ a .circlebtn {
     margin-top: 40px;
   }
 
+  .linkout a {
+
+  }
+
+  .linkout {
+    display: block;
+    width: 100%;
+    padding: 10px;
+  }
+
   #boxes {
     /*display: none;*/
 
@@ -1157,25 +1176,36 @@ body {
 
 }
 
+
+@media screen and (min-width: 780px) {
+
+  .linkcontainer {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+}
+
 .imgfoot {
 
 }
 
 #footer .container {
-  padding: 26px;
+
 
 }
 
 #footer {
-
-  /*background-image: linear-gradient(rgba(72, 171, 224, 0.8), rgba(72, 171, 224, 0.8)),
-        url('../img/swimg8.png');*/
-  background-image: linear-gradient(rgba(183,215,241,0.85), rgba(183,215,241,0.85)),
-              url('../img/swimg8.png');
-  background-size: cover;
-  background-position: center;
-
+  height: 80px;
+  background: white;
   width: 100%;
-  height: auto;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
 
 }
