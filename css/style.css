@@ -1291,6 +1291,12 @@ body {
   height: 300px;
 }
 
+.backtxt:hover,
+.backtxt:focus {
+  text-decoration: none;
+  color: #93C886;
+}
+
 .lower-block {
   margin-top: -20px;
   background: white;
