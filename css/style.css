@@ -762,6 +762,10 @@ a .circlebtn {
     padding: 10px;
   }
 
+  .linkcontainer {
+    margin-bottom: 20px;
+  }
+
   #boxes {
     /*display: none;*/
 
@@ -1184,6 +1188,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+
   }
 
 }
@@ -1208,4 +1213,218 @@ body {
   left: 0;
   right: 0;
 
+}
+
+#smallboxes {
+  position: absolute;
+  bottom: 80px;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 80px;
+
+}
+
+#buttons-section .linkcontainer {
+  border-radius: 6px;
+  background: red;
+  padding: 20px;
+}
+
+#buttons-section {
+  height: auto;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+
+
+}
+
+.roundedbox {
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  height: 80px;
+  margin: 10px;
+  background: white;
+}
+
+.person {
+  height: 160px;
+  width: 160px;
+  border-radius: 10px;
+  margin-bottom: 35px;
+}
+
+.teamcon .col-md-4 {
+  margin: 0;
+  padding: 0;
+}
+
+.image-block {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 300px;
+}
+
+.lower-block {
+  margin-top: -20px;
+  background: white;
+  height: 160px;
+}
+
+.person-name {
+  font-size: 26px;
+  position: absolute;
+  top: 210px;
+  font-family: 'Quicksand', sans-serif;
+  color: white;
+}
+
+.person-title {
+  padding-top: 40px;
+  font-size: 20px;
+  font-family: 'Montserrat', serif;
+  width: 100%;
+  color: grey;
+  text-align: center;
+}
+
+.person-descrip {
+  font-size: 16px;
+  padding-left: 40px;
+  padding-right: 40px;
+  font-family: 'Didact Gothic', sans-serif;
+  width: 100%;
+  color: lightgrey;
+  text-align: center;
+}
+
+.mainteamtitle {
+  text-align: left;
+  font-size: 40px;
+  line-height: 50px;
+  font-family: 'Montserrat', serif;
+  width: 100%;
+  color: grey;
+  padding: 20px;
+}
+
+.title-row .col-md-1 {
+
+}
+
+.title-row {
+  overflow: hidden;
+}
+
+@media(min-width: 1000px) {
+
+  .titlecon {
+    margin-top: 100px;
+    margin-bottom: 100px;
+  }
+
+  .backbtn {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+  }
+
+  .bbtn i {
+    font-size: 40px;
+    color: grey;
+    width: 100%;
+    text-align: right;
+    margin-left: 40px;
+    margin-top: -20px;
+
+  }
+
+  .row-eq-height {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display:         flex;
+  }
+
+  .backtxt {
+    font-size: 16px;
+    font-family: 'Didact Gothic', sans-serif;
+    color: #80C995;
+    text-align: center;
+    margin-top: 80px;
+    width: 100px;
+    margin-left: -25px;
+  }
+}
+
+@media(max-width: 1000px) {
+
+  .titlecon {
+    margin-top: 30px;
+    margin-bottom: 60px;
+  }
+
+  .mainteamtitle {
+
+  }
+
+  .backbtn {
+    width: 100%;
+    display: flex;
+    align-items: left;
+    justify-content: left;
+    height: 100%;
+    margin-top: 20px;
+  }
+
+  .bbtn i {
+    font-size: 30px;
+    color: grey;
+    width: 100%;
+    text-align: left;
+    margin-left: 20px;
+  }
+
+  .row-eq-height {
+  }
+
+  .backtxt {
+    font-size: 20px;
+    font-family: 'Didact Gothic', sans-serif;
+    color: #80C995;
+    text-align: center;
+    width: 100px;
+    margin-left: 5px;
+  }
+}
+
+.greenrow {
+  background: #80C995;
+}
+
+.redrow {
+  background: #EF4A5A;
+}
+
+.bluerow {
+  background: #48ABE0;
+}
+
+.blueshadow {
+  /*box-shadow: 0 0 26px 0 rgba(70,171,224,0.8);*/
+}
+
+.greenshadow {
+  /*box-shadow: 0 0 26px 0 rgba(203,231,208,0.8);*/
+}
+
+.redshadow {
+  /*box-shadow: 0 0 26px 0 rgba(249,182,174,0.8);*/
 }
