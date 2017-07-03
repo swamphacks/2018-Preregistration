@@ -93,6 +93,11 @@ html {
   -ms-user-select: none;
 }
 
+#logoteam {
+  height: 85.5px;
+  width: 180px;
+}
+
 a .circlebtn {
   font-size: 28px;
   color: #48ABE0;
@@ -1362,7 +1367,7 @@ body {
   .backtxt {
     font-size: 16px;
     font-family: 'Didact Gothic', sans-serif;
-    color: #80C995;
+    color: #93C886;
     text-align: center;
     margin-top: 80px;
     width: 100px;
@@ -1423,7 +1428,7 @@ body {
   .backtxt {
     font-size: 20px;
     font-family: 'Didact Gothic', sans-serif;
-    color: #80C995;
+    color: #93C886;
     text-align: center;
     width: 100px;
     margin-left: 5px;
@@ -1464,4 +1469,18 @@ body {
 
 .orangeblk {
   background: #F69F85;
+}
+
+.navbar {
+  background: pink;
+  height: 100px;
+  border-radius: 0;
+}
+
+.logo-team {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 40px;
+  margin-bottom: -40px;
 }
