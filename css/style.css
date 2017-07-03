@@ -96,6 +96,12 @@ html {
 #logoteam {
   height: 85.5px;
   width: 180px;
+  user-drag: none;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -webkit-user-drag: none;
+  -ms-user-select: none;
 }
 
 a .circlebtn {
@@ -1260,6 +1266,12 @@ body {
   width: 160px;
   border-radius: 10px;
   margin-bottom: 35px;
+  user-drag: none;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -webkit-user-drag: none;
+  -ms-user-select: none;
 }
 
 .teamcon .col-md-4 {
@@ -1313,7 +1325,7 @@ body {
 }
 
 .mainteamtitle {
-  text-align: left;
+  text-align: center;
   font-family: 'Montserrat', serif;
   width: 100%;
   color: grey;
@@ -1328,6 +1340,31 @@ body {
   overflow: hidden;
 }
 
+.backbtntop {
+  display: flex;
+  align-items: left;
+  justify-content: left;
+  margin-top: 20px;
+  margin-left: 20px;
+}
+
+.bbtn i {
+  font-size: 30px;
+  color: grey;
+  width: 100%;
+  text-align: left;
+  margin-left: 20px;
+}
+
+.backtxt {
+  font-size: 20px;
+  font-family: 'Didact Gothic', sans-serif;
+  color: #93C886;
+  text-align: center;
+  width: 100px;
+  margin-left: 5px;
+}
+
 @media(min-width: 1000px) {
 
   .titlecon {
@@ -1340,14 +1377,14 @@ body {
     line-height: 50px;
   }
 
-  .backbtn {
+  /*.backbtn {
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
     height: 100%;
-  }
-
+  }*/
+/*
   .bbtn i {
     font-size: 40px;
     color: grey;
@@ -1355,7 +1392,7 @@ body {
     text-align: right;
     margin-top: -20px;
 
-  }
+  }*/
 
   .row-eq-height {
     display: -webkit-box;
@@ -1364,7 +1401,7 @@ body {
     display:         flex;
   }
 
-  .backtxt {
+  /*.backtxt {
     font-size: 16px;
     font-family: 'Didact Gothic', sans-serif;
     color: #93C886;
@@ -1372,7 +1409,7 @@ body {
     margin-top: 80px;
     width: 100px;
     margin-left: -65px;
-  }
+  }*/
 
   .teamcon .row {
 
@@ -1391,6 +1428,14 @@ body {
     border-bottom-right-radius: 10px;
     border-top-right-radius: 10px;
   }
+
+  .logo-team {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 40px;
+    margin-bottom: -40px;
+  }
 }
 
 @media(max-width: 1000px) {
@@ -1404,16 +1449,7 @@ body {
     font-size: 30px;
     line-height: 40px;
   }
-
-  .backbtn {
-    width: 100%;
-    display: flex;
-    align-items: left;
-    justify-content: left;
-    height: 100%;
-    margin-top: 20px;
-  }
-
+/*
   .bbtn i {
     font-size: 30px;
     color: grey;
@@ -1432,6 +1468,17 @@ body {
     text-align: center;
     width: 100px;
     margin-left: 5px;
+  }*/
+
+  .backbtn {
+    display: none;
+  }
+
+  .logo-team {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 40px;
   }
 }
 
@@ -1475,12 +1522,4 @@ body {
   background: pink;
   height: 100px;
   border-radius: 0;
-}
-
-.logo-team {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: 40px;
-  margin-bottom: -40px;
 }
