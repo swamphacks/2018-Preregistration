@@ -1348,7 +1348,6 @@ body {
     color: grey;
     width: 100%;
     text-align: right;
-    margin-left: 40px;
     margin-top: -20px;
 
   }
@@ -1367,7 +1366,7 @@ body {
     text-align: center;
     margin-top: 80px;
     width: 100px;
-    margin-left: -25px;
+    margin-left: -65px;
   }
 
   .teamcon .row {
