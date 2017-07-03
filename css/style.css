@@ -1352,6 +1352,7 @@ body {
   justify-content: left;
   margin-top: 20px;
   margin-left: 20px;
+  transition: 0.3s;
 }
 
 .bbtn i {
@@ -1466,6 +1467,11 @@ body {
     justify-content: center;
     margin-top: 40px;
   }
+}
+
+.backbtntop:hover,
+.backbtntop:focus {
+  opacity: 0.6;
 }
 
 .greenrow {
