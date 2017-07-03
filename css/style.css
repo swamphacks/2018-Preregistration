@@ -1262,6 +1262,10 @@ body {
   padding: 0;
 }
 
+.teamcon {
+  transition: 0.3s;
+}
+
 .image-block {
   width: 100%;
   display: flex;
@@ -1305,8 +1309,6 @@ body {
 
 .mainteamtitle {
   text-align: left;
-  font-size: 40px;
-  line-height: 50px;
   font-family: 'Montserrat', serif;
   width: 100%;
   color: grey;
@@ -1326,6 +1328,11 @@ body {
   .titlecon {
     margin-top: 100px;
     margin-bottom: 100px;
+  }
+
+  .mainteamtitle {
+    font-size: 40px;
+    line-height: 50px;
   }
 
   .backbtn {
@@ -1362,6 +1369,24 @@ body {
     width: 100px;
     margin-left: -25px;
   }
+
+  .teamcon .row {
+
+  }
+
+  .image-block {
+
+  }
+
+  .firstblk {
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
+  }
+
+  .lastblk {
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+  }
 }
 
 @media(max-width: 1000px) {
@@ -1372,7 +1397,8 @@ body {
   }
 
   .mainteamtitle {
-
+    font-size: 30px;
+    line-height: 40px;
   }
 
   .backbtn {
@@ -1427,4 +1453,16 @@ body {
 
 .redshadow {
   /*box-shadow: 0 0 26px 0 rgba(249,182,174,0.8);*/
+}
+
+.greenblk {
+  background: #93C886;
+}
+
+.navyblk {
+  background: #293D53;
+}
+
+.orangeblk {
+  background: #F69F85;
 }
