@@ -1493,7 +1493,7 @@ body {
   }
 }
 
-@media(max-width: 780px) {
+@media(max-width: 580px) {
   .wrapper-dropdown-5 {
 
     width: 260px;
@@ -1597,7 +1597,7 @@ body {
   }
 }
 
-@media(min-width: 780px) {
+@media(min-width: 580px) {
 
   .wrapper-dropdown-5 {
 
