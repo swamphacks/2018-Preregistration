@@ -1320,6 +1320,7 @@ body {
   height: 160px;
   width: 160px;
   border-radius: 10px;
+  margin: 0 auto;
   margin-bottom: 35px;
   user-drag: none;
   user-select: none;
