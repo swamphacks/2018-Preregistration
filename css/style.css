@@ -1361,6 +1361,7 @@ body {
 
 .person-name {
   font-size: 26px;
+  text-align: center;
   position: absolute;
   top: 210px;
   font-family: 'Quicksand', sans-serif;
