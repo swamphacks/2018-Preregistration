@@ -19,6 +19,18 @@ html {
   background: rgba(128,201,149,0.7); /* Gecko Browsers */
 }
 
+@-webkit-keyframes autofill {
+    to {
+        color: #666;
+        background: transparent;
+    }
+}
+
+input:-webkit-autofill {
+    -webkit-animation-name: autofill;
+    -webkit-animation-fill-mode: both;
+}
+
 #pagetwo {
   background: green;
   height: 100%;
@@ -596,7 +608,7 @@ a .circlebtn {
   -webkit-transition: all 700ms;
   transition: all 700ms;
   margin-top: -5%;
-  overflow: scroll;
+  overflow: hidden;
 }
 
 /* Panel content animation after open */
@@ -1369,7 +1381,7 @@ body {
   padding-right: 40px;
   font-family: 'Didact Gothic', sans-serif;
   width: 100%;
-  color: #bcbec0;
+  color: grey;
   text-align: center;
 }
 
@@ -1786,3 +1798,4 @@ body {
     border-bottom: 1px solid rgba(0,0,0,0.2);
     max-height: 400px;
 }
+
