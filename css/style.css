@@ -597,7 +597,7 @@ a .circlebtn {
   right: 0;
   z-index: 999;
   color: white;
-  overflow: hidden'
+  overflow: hidden;
 
 }
 /* panel content (only for animation delay after open) */
@@ -609,7 +609,7 @@ a .circlebtn {
   -webkit-transition: all 700ms;
   transition: all 700ms;
   margin-top: -5%;
-  overflow-y: scroll;
+  overflow-y: auto;
 }
 
 /* Panel content animation after open */
