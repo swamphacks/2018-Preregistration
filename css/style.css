@@ -620,7 +620,7 @@ a .circlebtn {
 
 /*  Specific panel "Slice" */
 /* •••••••••••••••••••••••••••••••• */
-.panel#slice {
+.panel#mentor {
   background-color: #48ABE0;
   -webkit-transition: all 800ms cubic-bezier(0.19, 1, 0.56, 1);
   transition: all 800ms cubic-bezier(0.19, 1, 0.56, 1);
@@ -637,12 +637,12 @@ a .circlebtn {
           right: 0;
 
 }
-.panel#slice:target {
+.panel#mentor:target {
   -webkit-transform: translate3d(0, 0, 0);
           transform: translate3d(0, 0, 0);
 }
 
-.panel#slicevol {
+.panel#volunteer {
   background-color: #F04C5A;
   -webkit-transition: all 800ms cubic-bezier(0.19, 1, 0.56, 1);
   transition: all 800ms cubic-bezier(0.19, 1, 0.56, 1);
@@ -659,7 +659,7 @@ a .circlebtn {
           right: 0;
 
 }
-.panel#slicevol:target {
+.panel#volunteer:target {
   -webkit-transform: translate3d(0, 0, 0);
           transform: translate3d(0, 0, 0);
 }
@@ -730,11 +730,11 @@ a .circlebtn {
   margin: 0 auto;
 }
 
-#slicevol .panel-content span i {
+#volunteer .panel-content span i {
   color: #a4232f;
 }
 
-#slice .panel-content span i {
+#mentor .panel-content span i {
   color: #1f6c95;
 }
 
@@ -889,13 +889,13 @@ a .circlebtn {
     margin-right: -150px;
   }
 
-  #slice {
+  #mentor {
 
     height: 100vh;
     overflow-y: scroll;
   }
 
-  #slicevol {
+  #volunteer {
 
     height: 100vh;
     overflow-y: scroll;
@@ -1079,7 +1079,7 @@ a .circlebtn {
 	font-size: 2.2em;
 }
 
-#slicevol .panel-content .closered {
+#volunteer .panel-content .closered {
   background: #a4232f;
   color: #a4232f;
 }

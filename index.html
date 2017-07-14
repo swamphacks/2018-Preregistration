@@ -114,8 +114,8 @@
         <div id="dd" class="wrapper-dropdown-5" tabindex="1">MORE
           <ul class="dropdown">
             <li><a href="mailto:sponsors@swamphacks.com">Sponsor</a></li>
-            <li><a href="#slicevol">Volunteer</a></li>
-            <li><a href="#slice">Mentor</a></li>
+            <li><a href="#volunteer">Volunteer</a></li>
+            <li><a href="#mentor">Mentor</a></li>
           </ul>
         </div>
       </div>
@@ -296,7 +296,7 @@ target="_blank"
 
 </div>
 
-  <div class="panel" id="slice">
+  <div class="panel" id="mentor">
       <div class="panel-content">
           <span class="closementor overlay-close"><a href="#home"><i class="fa fa-times" aria-hidden="true"></i></a></span>
           <h1 class="yugetxt">Become a Mentor</h1>
@@ -318,7 +318,7 @@ target="_blank"
       </div>
   </div>
 
-  <div class="panel" id="slicevol">
+  <div class="panel" id="volunteer">
       <div class="panel-content">
           <span class="closementor overlay-close"><a href="#home"><i class="fa fa-times redclose" aria-hidden="true"></i></a></span>
           <h1 class="yugetxtred">Become a Volunteer</h1>
@@ -453,7 +453,7 @@ target="_blank"
 
       scrollFn();
 
-      [].slice.call( document.querySelectorAll( '.morph-button' ) ).forEach( function( bttn ) {
+      [].mentor.call( document.querySelectorAll( '.morph-button' ) ).forEach( function( bttn ) {
         new UIMorphingButton( bttn, {
           closeEl : '.icon-close',
           onBeforeOpen : function() {
@@ -476,7 +476,7 @@ target="_blank"
       } );
 
       // for demo purposes only
-      [].slice.call( document.querySelectorAll( 'form button' ) ).forEach( function( bttn ) {
+      [].mentor.call( document.querySelectorAll( 'form button' ) ).forEach( function( bttn ) {
         bttn.addEventListener( 'click', function( ev ) { ev.preventDefault(); } );
       } );
     })();
