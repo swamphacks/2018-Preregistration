@@ -762,7 +762,7 @@ a .circlebtn {
 
 }
 
-@media screen and (max-width: 350px) {
+@media screen and (max-width: 780px) {
 
   #footer {
     bottom: -70px;
@@ -773,7 +773,7 @@ a .circlebtn {
 
 }
 
-@media screen and (min-width: 350px) {
+@media screen and (min-width: 780px) {
 
   #footer {
     bottom: 0;
