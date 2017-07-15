@@ -609,7 +609,7 @@ a .circlebtn {
   -webkit-transition: all 700ms;
   transition: all 700ms;
   margin-top: -5%;
-  overflow: scroll;
+  overflow: auto;
 }
 
 /* Panel content animation after open */
