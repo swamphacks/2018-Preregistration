@@ -103,7 +103,7 @@
 								<p><label>School Email</label><input type="text" id="myEmail" /></p>
 								<p><label>First Name</label><input type="text" id="firstname" /></p>
 								<p><label>Last Name</label><input type="text" id="lastname" /></p>
-								<p><button id="emailbtn" class="validate" onclick="saveData()">GO!</button></p>
+								<p><button id="emailbtn" class="validate">GO!</button></p>
 							</form>
 						</div>
 					</div>
@@ -454,7 +454,7 @@ target="_blank"
       scrollFn();
 
       [].slice.call( document.querySelectorAll( '.morph-button' ) ).forEach( function( bttn ) {
-        new UIMorphingButton( bttn, {
+        var UIbttn = new UIMorphingButton( bttn, {
           closeEl : '.icon-close',
           onBeforeOpen : function() {
             // don't allow to scroll
@@ -473,6 +473,11 @@ target="_blank"
             canScroll();
           }
         } );
+        
+        document.getElementById('emailbtn').addEventListener('click', function(){
+          saveData(UIbttn);
+          $(this).closest('form').find("input[type=text], textarea").val("");
+        });
       } );
 
       // for demo purposes only
@@ -498,7 +503,7 @@ target="_blank"
     $(".result").text("");
   }
 
-  function saveData() {
+  function saveData(UIbttn) {
 
     var ref = new Firebase("https://swamphacks-pre-registration.firebaseio.com");
     var emailVal = $("#myEmail").val();
@@ -516,6 +521,10 @@ target="_blank"
       $(".result").text("Thanks for signing up!");
       $(".result").css("color", "#80C995");
 
+      setTimeout(function(){
+        UIbttn.toggle()
+        $(".result").text("");
+      }, 1000);
       // $(".content-style-form #myEmail").css("border-color", "#68bd45");
       console.log('Success! Email Added.');
 
@@ -528,7 +537,6 @@ target="_blank"
       document.getElementById("myEmail").value = "";
 
     }
-
   }
 
   function saveDataMentor() {
@@ -550,7 +558,11 @@ target="_blank"
 
       $(".resultmentor").text("Thanks for signing up!");
       $(".resultmentor").css("color", "#cbe7d0");
-
+      setTimeout(function() { 
+        window.location.href="#home"; 
+        $(".resultmentor").text("");
+        document.getElementById("mentorbtn").closest("form").reset();
+      }, 1000);
       // $(".content-style-form #myEmail").css("border-color", "#68bd45");
       console.log('Success! Email Added.');
 
@@ -583,7 +595,11 @@ target="_blank"
 
       $(".resultvol").text("Thanks for signing up!");
       $(".resultvol").css("color", "#cbe7d0");
-
+      setTimeout(function() { 
+        window.location.href="#home";
+        $(".resultvol").text(""); 
+        document.getElementById("volunteerbtn").closest("form").reset();
+      }, 1000);
       // $(".content-style-form #myEmail").css("border-color", "#68bd45");
       console.log('Success! Email Added.');
 
