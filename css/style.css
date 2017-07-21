@@ -12,6 +12,36 @@ html {
   height: 100%;
 }
 
+@font-face {
+    font-family: "Quicksand";
+    src: url(../fonts/Quicksand-Regular.ttf) format("truetype");
+}
+
+@font-face {
+    font-family: "Didact Gothic";
+    src: url(../fonts/DidactGothic-Regular.ttf) format("truetype");
+}
+
+@font-face {
+    font-family: "Montserrat-Bold";
+    src: url(../fonts/Montserrat-Bold.ttf) format("truetype");
+}
+
+@font-face {
+    font-family: "Montserrat-Medium";
+    src: url(../fonts/Montserrat-Medium.ttf) format("truetype");
+}
+
+@font-face {
+    font-family: "Montserrat-Light";
+    src: url(../fonts/Montserrat-Light.ttf) format("truetype");
+}
+
+@font-face {
+    font-family: "Montserrat";
+    src: url(../fonts/Montserrat-Regular.ttf) format("truetype");
+}
+
 ::selection {
   background: rgba(128,201,149,0.7); /* WebKit/Blink Browsers */
 }
@@ -425,7 +455,7 @@ a .circlebtn {
 
 #mainheader {
   font-size: 60px;
-  font-family: 'Montserrat', serif;
+  font-family: 'Montserrat-Medium', serif;
   color: white;
   transition: 0.3s;
 }
@@ -800,7 +830,7 @@ a .circlebtn {
 @media screen and (max-width: 600px) {
   #mainheader {
     font-size: 36px;
-    font-family: 'Montserrat', serif;
+    font-family: 'Montserrat-Medium', serif;
     color: white;
   }
 
