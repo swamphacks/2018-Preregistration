@@ -32,6 +32,10 @@
    ================================================== -->
    <link rel="stylesheet" href="css/font-awesome.min.css">
 
+   <!-- Favicon
+    ================================================== -->
+   <link rel="icon" type="image/png" href="favicon.png" />
+
 </head>
 
 <body>
@@ -336,7 +340,7 @@
             canScroll();
           }
         } );
-        
+
         document.getElementById('emailbtn').addEventListener('click', function(){
           saveData(UIbttn);
           $(this).closest('form').find("input[type=text], textarea").val("");
@@ -424,8 +428,8 @@
 
       $(".resultmentor").text("Thanks for signing up!");
       $(".resultmentor").css("color", "#cbe7d0");
-      setTimeout(function() { 
-        window.location.href="#home"; 
+      setTimeout(function() {
+        window.location.href="#home";
         $(".resultmentor").text("");
         document.getElementById("mentorbtn").closest("form").reset();
       }, 1000);
@@ -461,9 +465,9 @@
 
       $(".resultvol").text("Thanks for signing up!");
       $(".resultvol").css("color", "#cbe7d0");
-      setTimeout(function() { 
+      setTimeout(function() {
         window.location.href="#home";
-        $(".resultvol").text(""); 
+        $(".resultvol").text("");
         document.getElementById("volunteerbtn").closest("form").reset();
       }, 1000);
       // $(".content-style-form #myEmail").css("border-color", "#68bd45");
