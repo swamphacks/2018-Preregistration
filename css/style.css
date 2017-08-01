@@ -298,8 +298,8 @@ a .circlebtn {
   position: absolute;
 
   background-color: #5ea9d0;
-  background: -webkit-linear-gradient(to right, #007991, #78ffd6);   
-  background: linear-gradient(to right, #007991, #78ffd6);  
+  background: -webkit-linear-gradient(to right, #007991, #78ffd6);
+  background: linear-gradient(to right, #007991, #78ffd6);
   /*
   background: #56ccf2;
   background: -webkit-linear-gradient(to right, #56ccf2, #2f80ed);
@@ -537,6 +537,7 @@ a .circlebtn {
   font-family: 'Montserrat', serif;
   transition: 0.2s;
   height: 80px;
+  margin-bottom: 20px;
   /*border-bottom-width: 6px;
   border-bottom-color: white;
   border-bottom-style: solid;
@@ -613,9 +614,11 @@ a .circlebtn {
 .container .morph-button .morph-content .content-style-form .result {
   text-align: center;
   font-family: 'Montserrat', sans-serif;
-  font-size: 12px;
+  font-size: 16px;
   margin-bottom: -10px;
   margin-top: -5px;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 /* Common panel style */
