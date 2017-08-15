@@ -142,6 +142,7 @@ input:-webkit-autofill {
   -webkit-user-select: none;
   -webkit-user-drag: none;
   -ms-user-select: none;
+  z-index: 100;
 }
 
 a .circlebtn {
@@ -1215,15 +1216,30 @@ a .circlebtn {
   padding-top: 20px;
 }
 
+.cloud1 {
+  height: 240px;
+  width: 360px;
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  z-index: -1px;
+}
+
+.cloud2 {
+  height: 240px;
+  width: 360px;
+  position: absolute;
+  top: 30%;
+  right: 10%;
+}
+
 .sponsorsTitleSubText {
   color: white;
   padding-top: 40px;
 }
 
 .sponsorsFSection {
-  background-image: url(../img/SponsorsBackground.png);
-  background-repeat:no-repeat;
-  background-size: cover;
+  background: linear-gradient(0deg, #0081c8, #0b3b50) no-repeat;
   display: block;
   text-align: center;
   padding-bottom: 70px;
@@ -1294,9 +1310,7 @@ a .circlebtn {
 
 .SponsorsWhySwampBox {
   height: auto;
-  background-image: url("../img/SwampHacksBotBackground.png");
-  background-size: 100% 100%;
-  background-repeat:no-repeat;
+  background: linear-gradient(0deg, #e8d0a2, #0080c6) no-repeat;
   text-align: center;
 }
 
@@ -1342,6 +1356,7 @@ a .circlebtn {
 .testimonials {
   display: inline-block;
   padding: 0px 20px;
+  padding-bottom: 70px;
   margin: 80px 10px;
   max-width: 60rem;
 }
